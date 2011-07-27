@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hello">Hello World, LunchListActivity!</string>
-    <string name="app_name">LunchList</string>
+    <string name="app_name">Restaurant Guide</string>
     <string name="take_out">Take out</string>
     <string name="delivery">Delivery</string>
     <string name="sit_down">Sit down</string>

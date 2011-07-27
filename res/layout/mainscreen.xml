@@ -10,6 +10,6 @@
         android:shadowDy="1"   android:layout_width="match_parent"></TextView>
     <ImageButton android:src="@drawable/ball_green" android:id="@+id/main_search" android:layout_height="120sp" android:layout_width="match_parent" android:onClick="ShowList"></ImageButton>
     <ImageButton android:src="@drawable/ball_red" android:id="@+id/main_list" android:layout_height="120sp" android:layout_width="match_parent" android:onClick="Search"></ImageButton>
-    <ImageButton android:src="@drawable/ball_yellow" android:id="@+id/main_searchlist" android:layout_height="120sp" android:layout_width="match_parent"  android:onClick="SearchList"></ImageButton>
+    <ImageButton android:src="@drawable/ball_yellow" android:id="@+id/main_searchlist" android:layout_height="120sp" android:layout_width="match_parent" ></ImageButton>
     
 </LinearLayout>

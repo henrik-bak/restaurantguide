@@ -38,7 +38,7 @@
 			android:text="@string/phone" android:textSize="20sp" android:textStyle="bold" android:padding="5sp">
 		</TextView>
 		
-		<TextView android:id="@+id/details_phone"  android:text="TextView" android:padding="5sp">
+		<TextView android:id="@+id/details_phone" android:clickable="true" android:onClick="performDial"  android:text="TextView" android:padding="5sp">
 		</TextView>
 		
 	</TableRow>
@@ -50,7 +50,7 @@
 		<TextView android:id="@+id/widget53"  android:text="@string/web" android:textSize="20sp" android:textStyle="bold" android:padding="5sp">
 		</TextView>
 		
-		<TextView android:id="@+id/details_web"  android:text="TextView" android:padding="5sp">
+		<TextView android:id="@+id/details_web" android:autoLink="web" android:padding="5sp">
 		</TextView>
 		
 	</TableRow>
@@ -63,7 +63,7 @@
 		</ScrollView>
 		
 		<TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/description" android:textSize="20sp" android:textStyle="bold" android:padding="5sp" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"></TextView>
-		<TextView android:id="@+id/details_details" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/textView1" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:layout_toLeftOf="@+id/details_reviews"></TextView>
+		<TextView android:id="@+id/details_details" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/textView1" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:layout_toLeftOf="@+id/details_reviews" android:maxLines="15" android:scrollbars="vertical"></TextView>
 		<TextView android:id="@+id/textView3" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/reviews" android:layout_above="@+id/details_reviews" android:textSize="20sp" android:textStyle="bold" android:padding="5sp" android:layout_alignLeft="@+id/details_reviews"></TextView>
 	</RelativeLayout>
 </TableLayout>
