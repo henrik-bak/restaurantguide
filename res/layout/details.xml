@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:id="@+id/widget32"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android" android:stretchColumns="1">
+	
+	<TextView android:id="@+id/details_textView" android:textStyle="bold" android:padding="5sp" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:text="@string/details" android:layout_height="wrap_content"></TextView>
+	
+	<!--NAME TEXTFIELDS  -->
+     
+	
+	<TableRow android:id="@+id/widget35" android:layout_width="fill_parent"
+		 android:orientation="horizontal">
+		<TextView 
+			android:text="@string/name" android:textSize="20sp" android:textStyle="bold" android:padding="5sp">
+		</TextView>
+		<TextView android:id="@+id/details_name" 
+			 android:text="TextView" android:padding="5sp">
+		</TextView>
+	</TableRow>
+	
+	<!--ADDRRESS TEXTFIELDS  -->
+	
+	<TableRow android:id="@+id/widget45" android:layout_width="fill_parent"
+		 android:orientation="horizontal">
+		<TextView android:id="@+id/widget46" android:layout_width="wrap_content"
+			 android:text="@string/address" android:textSize="20sp" android:textStyle="bold" android:padding="5sp">
+		</TextView>
+		<TextView android:id="@+id/details_address"  android:text="TextView" android:padding="5sp">
+		</TextView>
+	</TableRow>
+	
+	<!--PHONE TEXTFIELDS  -->
+	
+	<TableRow android:id="@+id/widget48" android:layout_width="fill_parent"
+		android:orientation="horizontal">
+		
+		<TextView android:id="@+id/widget49" 
+			android:text="@string/phone" android:textSize="20sp" android:textStyle="bold" android:padding="5sp">
+		</TextView>
+		
+		<TextView android:id="@+id/details_phone"  android:text="TextView" android:padding="5sp">
+		</TextView>
+		
+	</TableRow>
+	
+	<!--WEB TEXTFIELDS  -->
+	
+	<TableRow android:id="@+id/widget52"  android:orientation="horizontal">
+		
+		<TextView android:id="@+id/widget53"  android:text="@string/web" android:textSize="20sp" android:textStyle="bold" android:padding="5sp">
+		</TextView>
+		
+		<TextView android:id="@+id/details_web"  android:text="TextView" android:padding="5sp">
+		</TextView>
+		
+	</TableRow>
+	
+	<RelativeLayout android:id="@+id/widget74"
+		android:layout_width="252px" android:layout_height="match_parent">
+		<ScrollView android:id="@+id/details_reviews"
+			android:layout_width="162px" android:layout_height="fill_parent"
+			android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_below="@+id/textView1">
+		</ScrollView>
+		
+		<TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/description" android:textSize="20sp" android:textStyle="bold" android:padding="5sp" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"></TextView>
+		<TextView android:id="@+id/details_details" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/textView1" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:layout_toLeftOf="@+id/details_reviews"></TextView>
+		<TextView android:id="@+id/textView3" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/reviews" android:layout_above="@+id/details_reviews" android:textSize="20sp" android:textStyle="bold" android:padding="5sp" android:layout_alignLeft="@+id/details_reviews"></TextView>
+	</RelativeLayout>
+</TableLayout>

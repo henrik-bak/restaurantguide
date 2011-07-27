@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:weightSum="1">
+    <TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Restaurant guide" android:textSize="35sp" android:typeface="serif" android:shadowColor="#00ccff"  
+        android:shadowRadius="1.5"  
+        android:shadowDx="1"  
+        android:shadowDy="1"   android:layout_width="match_parent"></TextView>
+    <ImageButton android:src="@drawable/ball_green" android:id="@+id/main_search" android:layout_height="120sp" android:layout_width="match_parent" android:onClick="ShowList"></ImageButton>
+    <ImageButton android:src="@drawable/ball_red" android:id="@+id/main_list" android:layout_height="120sp" android:layout_width="match_parent" android:onClick="Search"></ImageButton>
+    <ImageButton android:src="@drawable/ball_yellow" android:id="@+id/main_searchlist" android:layout_height="120sp" android:layout_width="match_parent"  android:onClick="SearchList"></ImageButton>
+    
+</LinearLayout>
