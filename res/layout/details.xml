@@ -14,7 +14,7 @@
 			android:text="@string/name" android:textSize="20sp" android:textStyle="bold" android:padding="5sp">
 		</TextView>
 		<TextView android:id="@+id/details_name" 
-			 android:text="TextView" android:padding="5sp">
+			 android:text="TextView" android:padding="5sp" android:scrollbars="horizontal">
 		</TextView>
 	</TableRow>
 	
@@ -25,7 +25,7 @@
 		<TextView android:id="@+id/widget46" android:layout_width="wrap_content"
 			 android:text="@string/address" android:textSize="20sp" android:textStyle="bold" android:padding="5sp">
 		</TextView>
-		<TextView android:id="@+id/details_address"  android:text="TextView" android:padding="5sp">
+		<TextView android:id="@+id/details_address"  android:text="TextView" android:padding="5sp" android:scrollbars="horizontal">
 		</TextView>
 	</TableRow>
 	

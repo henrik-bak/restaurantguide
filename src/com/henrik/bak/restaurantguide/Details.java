@@ -83,7 +83,7 @@ public class Details extends Activity {
 			performDial(a);
 			return true;
 		}
-		return false;
+		return super.onKeyDown(keyCode, event);
 	}
 
 	public void performDial(View view) {

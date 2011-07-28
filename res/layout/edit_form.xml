@@ -13,11 +13,11 @@
 		</TableRow>
 		<TableRow>
 			<TextView android:text="Name:" />
-			<EditText android:id="@+id/edit_name" />
+			<EditText android:id="@+id/edit_name" android:scrollbars="horizontal" />
 		</TableRow>
 		<TableRow>
 			<TextView android:text="Address:" />
-			<EditText android:id="@+id/edit_addr" />
+			<EditText android:id="@+id/edit_addr" android:scrollbars="horizontal" />
 
 		</TableRow>
 		<TableRow>
@@ -26,7 +26,7 @@
 		</TableRow>
 		<TableRow>
 			<TextView android:text="Homepage:" />
-			<EditText android:id="@+id/edit_web" android:text="(not set)" />
+			<EditText android:id="@+id/edit_web" android:text="(not set)" android:scrollbars="horizontal" />
 		</TableRow>
 		<TableRow>
 			<TextView android:text="Location:" />
@@ -41,6 +41,7 @@
 			android:layout_span="2"
 			android:hint="Notes"
 			android:layout_marginTop="4dip"
+			android:scrollbars="vertical"
 		/>
 	</TableLayout>
 </ScrollView>
