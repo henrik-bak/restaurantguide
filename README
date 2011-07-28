@@ -1,0 +1,11 @@
+Hi,
+
+This is a Restaurant Guide Android application. It's main purpose is to help navigate in the available restaurants in the beautiful Hungarian city of Szeged.
+The program has its own database (local atm, todo: centralised, hosted database), GPS and Google Map support, contact information and details about almost every restaurant.
+Supported language: english, todo: hungarian.
+
+Please report any bugs and issues to help me develop this application!
+
+Contact me: bak.henrik@gmail.com
+
+Thanks, have fun!
