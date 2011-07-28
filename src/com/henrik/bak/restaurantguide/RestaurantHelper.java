@@ -223,6 +223,7 @@ class RestaurantHelper extends SQLiteOpenHelper {
 						"SELECT _id, name, address, phone, web, details, lat, lon FROM restaurants WHERE name LIKE '%"+name+"%' OR address LIKE '%"+address+"%' OR phone LIKE '%"+phone+"%' OR web LIKE '%"+web+"%' OR details LIKE '%"+details+"%'",null));
 		
 	}
+	
 
 	public void insertReview(String user, int score, String review, int resid) {
 		ContentValues cv = new ContentValues();

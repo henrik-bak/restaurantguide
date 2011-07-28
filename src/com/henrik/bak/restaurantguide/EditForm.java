@@ -161,8 +161,6 @@ public class EditForm extends Activity {
 											address.getText().toString(),  phone.getText().toString(),
 											web.getText().toString(),
 											details.getText().toString());
-				helper.updateLocation(restaurantId, 46.25,
-						20.1666667);
 			}
 		}
 	}
