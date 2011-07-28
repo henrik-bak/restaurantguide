@@ -27,16 +27,19 @@ public final class R {
         public static final int ic_menu_preferences=0x7f020009;
         public static final int icon=0x7f02000a;
         public static final int list=0x7f02000b;
-        public static final int marker=0x7f02000c;
-        public static final int restaurant=0x7f02000d;
-        public static final int run=0x7f02000e;
-        public static final int stat_notify_chat=0x7f02000f;
-        public static final int toast=0x7f020010;
+        public static final int listicon=0x7f02000c;
+        public static final int maps=0x7f02000d;
+        public static final int marker=0x7f02000e;
+        public static final int restaurant=0x7f02000f;
+        public static final int run=0x7f020010;
+        public static final int searchicon=0x7f020011;
+        public static final int stat_notify_chat=0x7f020012;
+        public static final int toast=0x7f020013;
     }
     public static final class id {
-        public static final int add=0x7f080031;
+        public static final int add=0x7f080034;
         public static final int addr=0x7f080001;
-        public static final int address=0x7f080027;
+        public static final int address=0x7f08002a;
         public static final int delivery=0x7f080005;
         public static final int details_address=0x7f08000f;
         public static final int details_details=0x7f080019;
@@ -52,25 +55,27 @@ public final class R {
         public static final int edit_phone=0x7f08001d;
         public static final int edit_web=0x7f08001e;
         public static final int feed=0x7f080007;
-        public static final int icon=0x7f080025;
+        public static final int icon=0x7f080028;
         public static final int location=0x7f080008;
-        public static final int main_about=0x7f080030;
-        public static final int main_help=0x7f08002f;
+        public static final int magaLoginLayout=0x7f080021;
+        public static final int main_about=0x7f080033;
+        public static final int main_help=0x7f080032;
         public static final int main_list=0x7f080022;
-        public static final int main_search=0x7f080021;
-        public static final int main_searchlist=0x7f080023;
-        public static final int map=0x7f080024;
-        public static final int menu_delete=0x7f08002d;
-        public static final int menu_edit=0x7f08002e;
+        public static final int main_map=0x7f080023;
+        public static final int main_search=0x7f080025;
+        public static final int main_searchlist=0x7f080024;
+        public static final int map=0x7f080026;
+        public static final int menu_delete=0x7f080030;
+        public static final int menu_edit=0x7f080031;
         public static final int name=0x7f080000;
         public static final int notes=0x7f080006;
-        public static final int prefs=0x7f080032;
-        public static final int row_title=0x7f080026;
-        public static final int search_addr=0x7f080029;
-        public static final int search_details=0x7f08002c;
-        public static final int search_name=0x7f080028;
-        public static final int search_phone=0x7f08002a;
-        public static final int search_web=0x7f08002b;
+        public static final int prefs=0x7f080035;
+        public static final int row_title=0x7f080029;
+        public static final int search_addr=0x7f08002c;
+        public static final int search_details=0x7f08002f;
+        public static final int search_name=0x7f08002b;
+        public static final int search_phone=0x7f08002d;
+        public static final int search_web=0x7f08002e;
         public static final int sit_down=0x7f080004;
         public static final int take_out=0x7f080003;
         public static final int textView1=0x7f080018;
@@ -85,6 +90,7 @@ public final class R {
         public static final int widget52=0x7f080013;
         public static final int widget53=0x7f080014;
         public static final int widget74=0x7f080016;
+        public static final int zoom=0x7f080027;
     }
     public static final class layout {
         public static final int detail_form=0x7f030000;

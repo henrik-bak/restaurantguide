@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:orientation="vertical"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent" android:weightSum="1">
-    <TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Restaurant guide" android:textSize="35sp" android:typeface="serif" android:shadowColor="#00ccff"  
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent" android:layout_width="fill_parent">
+    <RelativeLayout android:id="@+id/magaLoginLayout"
+        android:layout_height="fill_parent" android:layout_width="fill_parent">
+            <TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:text="Restaurant guide" android:textSize="35sp" android:typeface="serif" android:shadowColor="#00ccff"  
         android:shadowRadius="1.5"  
         android:shadowDx="1"  
         android:shadowDy="1"   android:layout_width="match_parent"></TextView>
-    <ImageButton android:src="@drawable/ball_green" android:id="@+id/main_search" android:layout_height="120sp" android:layout_width="match_parent" android:onClick="ShowList"></ImageButton>
-    <ImageButton android:src="@drawable/ball_red" android:id="@+id/main_list" android:layout_height="120sp" android:layout_width="match_parent" android:onClick="Search"></ImageButton>
-    <ImageButton android:src="@drawable/ball_yellow" android:id="@+id/main_searchlist" android:layout_height="120sp" android:layout_width="match_parent" ></ImageButton>
-    
-</LinearLayout>
+        <!--bal felso-->   
+        <ImageButton android:id="@+id/main_list" android:onClick="ShowList" android:src="@drawable/listicon"
+            android:layout_width="160dip" android:layout_height="160dip" android:layout_marginTop="60dip"></ImageButton>
+        <!--bal also-->
+        <ImageButton android:layout_below="@+id/main_list" android:onClick="ShowMap" android:id="@+id/main_map"  android:src="@drawable/maps"
+            android:layout_alignLeft="@+id/main_list" android:layout_height="160dip" android:layout_width="160dip"></ImageButton>
+        <!--jobb also-->
+        <ImageButton android:layout_below="@+id/main_list" android:id="@+id/main_searchlist" android:src="@drawable/ball_green"
+            android:layout_toRightOf="@+id/main_map" android:layout_height="160dip" android:layout_width="160dip"></ImageButton>
+        <!--jobb felso-->
+        <ImageButton android:id="@+id/main_search" android:layout_width="wrap_content" android:onClick="Search" android:src="@drawable/searchicon"
+            android:layout_toRightOf="@+id/main_list" android:layout_alignTop="@+id/main_list" android:layout_alignParentRight="true" android:layout_height="160dip"></ImageButton>
+</RelativeLayout>
+</ViewFlipper>

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.maps.MapView
-	xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/map"
-	android:layout_width="fill_parent" android:layout_height="fill_parent"
-	android:apiKey="0DDw2RCcOhb7brcdiuSoBgQZhMWyZLYQHZ8jHYw"
-	android:clickable="true" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<com.google.android.maps.MapView
+		xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/map"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:apiKey="0DDw2RCcOhb7brcdiuSoBgQZhMWyZLYQHZ8jHYw"
+		android:clickable="true" />
+		
+		    <LinearLayout android:id="@+id/zoom" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_alignParentBottom="true" 
+        android:layout_centerHorizontal="true" 
+        /> 
+
+</RelativeLayout>

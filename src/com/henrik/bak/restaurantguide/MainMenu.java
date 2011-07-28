@@ -25,6 +25,11 @@ public class MainMenu extends Activity {
 		startActivity(i);
 	 }
 	
+	public void ShowMap(View view) {
+		Intent i = new Intent(MainMenu.this, BrowseMap.class);
+		startActivity(i);
+	}
+	
 	public void Search(View view) {
 		Intent i = new Intent(MainMenu.this, Search.class);
 		startActivity(i);

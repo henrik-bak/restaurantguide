@@ -33,6 +33,8 @@
 		</activity>
 		<activity android:name=".SearchResults">
 		</activity>
+		<activity android:name=".BrowseMap">
+		</activity>
 		<uses-library android:name="com.google.android.maps"></uses-library>
 		
 	</application>
