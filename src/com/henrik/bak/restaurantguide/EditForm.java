@@ -12,6 +12,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -58,7 +59,7 @@ public class EditForm extends Activity {
 		web=(EditText)findViewById(R.id.edit_web);
 		details=(EditText)findViewById(R.id.edit_details);
 		location=(TextView)findViewById(R.id.edit_location);
-		
+		details.setMovementMethod(ScrollingMovementMethod.getInstance());
 		restaurantId=getIntent().getStringExtra(RestaurantListActivity.ID_EXTRA);
 		
 		if (restaurantId!=null) {
@@ -69,7 +70,7 @@ public class EditForm extends Activity {
 	@Override
 	public void onPause() {
 		save();
-		
+		locMgr.removeUpdates(onLocationChange);
 		super.onPause();
 	}
 	
@@ -87,7 +88,7 @@ public class EditForm extends Activity {
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		new MenuInflater(this).inflate(R.menu.details_option, menu);
+		new MenuInflater(this).inflate(R.menu.edit_options, menu);
 
 		return(super.onCreateOptionsMenu(menu));
 	}
@@ -95,8 +96,8 @@ public class EditForm extends Activity {
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		if (restaurantId==null) {
-			menu.findItem(R.id.location).setEnabled(false);
-			menu.findItem(R.id.map).setEnabled(false);
+			menu.findItem(R.id.save_all).setEnabled(false);
+			menu.findItem(R.id.save_loc).setEnabled(false);
 		}
 
 		return(super.onPrepareOptionsMenu(menu));
@@ -104,34 +105,21 @@ public class EditForm extends Activity {
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		if (item.getItemId()==R.id.location) {
+		if (item.getItemId()==R.id.save_loc) {
 			locMgr.requestLocationUpdates(LocationManager.GPS_PROVIDER,
 																		0, 0, onLocationChange);
 			
 			return(true);
 		}
-		else if (item.getItemId()==R.id.map) {
-			Intent i=new Intent(this, RestaurantMap.class);
-			
-			i.putExtra(RestaurantMap.EXTRA_LATITUDE, latitude);
-			i.putExtra(RestaurantMap.EXTRA_LONGITUDE, longitude);
-			i.putExtra(RestaurantMap.EXTRA_NAME, name.getText().toString());
-			
-			startActivity(i);
+		else if (item.getItemId()==R.id.save_all) {
+			save();
 			
 			return(true);
 		}
 
 		return(super.onOptionsItemSelected(item));
 	}
-	/*
-	private boolean isNetworkAvailable() {
-		ConnectivityManager cm=(ConnectivityManager)getSystemService(CONNECTIVITY_SERVICE);
-		NetworkInfo info=cm.getActiveNetworkInfo();
-		
-		return(info!=null);
-	}
-	*/
+	
 	private void load() {
 		Cursor c=helper.getRestaurantById(restaurantId);
 

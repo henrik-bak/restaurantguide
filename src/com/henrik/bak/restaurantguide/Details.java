@@ -55,7 +55,6 @@ public class Details extends Activity {
 		web = (TextView) findViewById(R.id.details_web);
 		details = (TextView) findViewById(R.id.details_details);
 		details.setMovementMethod(ScrollingMovementMethod.getInstance());
-		// location=(TextView)findViewById(R.id.location);
 
 		restaurantId = getIntent().getStringExtra(RestaurantListActivity.ID_EXTRA);
 
@@ -106,15 +105,12 @@ public class Details extends Activity {
 
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
-		menu.findItem(R.id.location).setEnabled(false);
 		return (super.onPrepareOptionsMenu(menu));
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		if (item.getItemId() == R.id.location) {
-			locMgr.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0,
-					onLocationChange);
+		if (item.getItemId() == R.id.plan_route) {
 
 			return (true);
 		} else if (item.getItemId() == R.id.map) {

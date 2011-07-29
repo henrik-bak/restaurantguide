@@ -1,15 +1,13 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="match_parent"
-	android:layout_height="wrap_content">
-	<TableLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:stretchColumns="1"
-		android:shrinkColumns="1"
-		>
+	android:layout_width="match_parent" android:layout_height="wrap_content">
+	<TableLayout android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:stretchColumns="1"
+		android:shrinkColumns="1">
 		<TableRow>
-			<TextView android:textAppearance="?android:attr/textAppearanceLarge" android:text="Edit" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="fill"></TextView>
-			
+			<TextView android:textAppearance="?android:attr/textAppearanceLarge"
+				android:text="Edit" android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:layout_gravity="fill"></TextView>
+
 		</TableRow>
 		<TableRow>
 			<TextView android:text="Name:" />
@@ -26,22 +24,17 @@
 		</TableRow>
 		<TableRow>
 			<TextView android:text="Homepage:" />
-			<EditText android:id="@+id/edit_web" android:text="(not set)" android:scrollbars="horizontal" />
+			<EditText android:id="@+id/edit_web" android:text="(not set)"
+				android:scrollbars="horizontal" />
 		</TableRow>
 		<TableRow>
 			<TextView android:text="Location:" />
 			<TextView android:id="@+id/edit_location" android:text="(not set)" />
 		</TableRow>
-		<EditText android:id="@+id/edit_details"
-			android:inputType="textMultiLine"
-			android:gravity="top"
-			android:lines="4"
-			android:scrollHorizontally="false"
-			android:maxLines="2"
+		<EditText android:id="@+id/edit_details" android:inputType="textMultiLine"
+			android:gravity="top" android:lines="4" android:maxLines="6"
 			android:layout_span="2"
-			android:hint="Notes"
-			android:layout_marginTop="4dip"
-			android:scrollbars="vertical"
-		/>
+			android:hint="Notes" android:layout_marginTop="4dip"
+			android:scrollbars="vertical" />
 	</TableLayout>
 </ScrollView>
