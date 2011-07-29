@@ -29,6 +29,8 @@ public class Details extends Activity {
 	String restaurantId = null;
 	TextView location = null;
 	LocationManager locMgr = null;
+	double mCurrLat = 0.0d;
+	double mCurrLon = 0.0d;
 	double latitude = 0.0d;
 	double longitude = 0.0d;
 
@@ -111,6 +113,14 @@ public class Details extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == R.id.plan_route) {
+			
+			locMgr.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, onLocationChange);
+			
+			 Uri uri = Uri
+             .parse("http://maps.google.com/maps?&saddr=" + mCurrLat+","+mCurrLon+"&daddr="+ latitude +"," +longitude);
+       Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+       startActivity(intent);
+
 
 			return (true);
 		} else if (item.getItemId() == R.id.map) {
@@ -146,12 +156,8 @@ public class Details extends Activity {
 
 	LocationListener onLocationChange = new LocationListener() {
 		public void onLocationChanged(Location fix) {
-			helper.updateLocation(restaurantId, fix.getLatitude(),
-					fix.getLongitude());
-			locMgr.removeUpdates(onLocationChange);
-
-			Toast.makeText(Details.this, "Location saved", Toast.LENGTH_LONG)
-					.show();
+			mCurrLat = fix.getLatitude();
+			mCurrLon = fix.getLongitude();
 		}
 
 		public void onProviderDisabled(String provider) {
