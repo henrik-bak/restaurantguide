@@ -82,7 +82,7 @@ public class RestaurantListActivity extends ListActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId()==R.id.add) {
-			startActivity(new Intent(RestaurantListActivity.this, EditForm.class));
+			startActivity(new Intent(RestaurantListActivity.this, EditDefRestaurant.class));
 			
 			return(true);
 		}
@@ -114,7 +114,7 @@ public class RestaurantListActivity extends ListActivity {
     	case R.id.menu_edit:
     		AdapterContextMenuInfo info2 = (AdapterContextMenuInfo)
 			item.getMenuInfo();
-    		Intent i=new Intent(RestaurantListActivity.this, EditForm.class);
+    		Intent i=new Intent(RestaurantListActivity.this, EditDefRestaurant.class);
     		i.putExtra(ID_EXTRA, String.valueOf(info2.id));
     		startActivity(i);
     		return true;

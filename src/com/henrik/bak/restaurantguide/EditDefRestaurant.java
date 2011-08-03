@@ -22,7 +22,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class EditForm extends Activity {
+public class EditDefRestaurant extends Activity {
 	EditText name=null;
 	EditText address=null;
 	EditText phone=null;
@@ -140,7 +140,8 @@ public class EditForm extends Activity {
 		c.close();
 	}
 	
-	private void save() {
+	
+	public void save() {		
 		if (name.getText().toString().length()>0) {
 	
 			if (restaurantId==null) {
@@ -155,6 +156,7 @@ public class EditForm extends Activity {
 											web.getText().toString(),
 											details.getText().toString());
 			}
+			
 		}
 	}
 	
@@ -168,7 +170,7 @@ public class EditForm extends Activity {
 			locMgr.removeUpdates(onLocationChange);
 			
 			Toast
-				.makeText(EditForm.this, "Location saved",
+				.makeText(EditDefRestaurant.this, "Location saved",
 									Toast.LENGTH_LONG)
 				.show();
 		}

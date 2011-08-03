@@ -37,7 +37,8 @@ public final class R {
         public static final int toast=0x7f020013;
     }
     public static final class id {
-        public static final int add=0x7f080037;
+        public static final int add=0x7f080038;
+        public static final int addfav=0x7f080031;
         public static final int addr=0x7f080001;
         public static final int address=0x7f08002a;
         public static final int delivery=0x7f080005;
@@ -58,22 +59,22 @@ public final class R {
         public static final int icon=0x7f080028;
         public static final int location=0x7f080008;
         public static final int magaLoginLayout=0x7f080021;
-        public static final int main_about=0x7f080036;
-        public static final int main_help=0x7f080035;
+        public static final int main_about=0x7f080037;
+        public static final int main_help=0x7f080036;
         public static final int main_list=0x7f080022;
         public static final int main_map=0x7f080023;
         public static final int main_search=0x7f080025;
         public static final int main_searchlist=0x7f080024;
         public static final int map=0x7f080026;
-        public static final int menu_delete=0x7f080033;
-        public static final int menu_edit=0x7f080034;
+        public static final int menu_delete=0x7f080034;
+        public static final int menu_edit=0x7f080035;
         public static final int name=0x7f080000;
         public static final int notes=0x7f080006;
         public static final int plan_route=0x7f080030;
-        public static final int prefs=0x7f080038;
+        public static final int prefs=0x7f080039;
         public static final int row_title=0x7f080029;
-        public static final int save_all=0x7f080032;
-        public static final int save_loc=0x7f080031;
+        public static final int save_all=0x7f080033;
+        public static final int save_loc=0x7f080032;
         public static final int search_addr=0x7f08002c;
         public static final int search_details=0x7f08002f;
         public static final int search_name=0x7f08002b;
@@ -100,10 +101,11 @@ public final class R {
         public static final int details=0x7f030001;
         public static final int edit_form=0x7f030002;
         public static final int list=0x7f030003;
-        public static final int mainscreen=0x7f030004;
-        public static final int map=0x7f030005;
-        public static final int row=0x7f030006;
-        public static final int searchscreen=0x7f030007;
+        public static final int listtabhost=0x7f030004;
+        public static final int mainscreen=0x7f030005;
+        public static final int map=0x7f030006;
+        public static final int row=0x7f030007;
+        public static final int searchscreen=0x7f030008;
     }
     public static final class menu {
         public static final int details_option=0x7f070000;
@@ -114,6 +116,7 @@ public final class R {
     }
     public static final class string {
         public static final int add=0x7f06000c;
+        public static final int add_to_fav=0x7f06001b;
         public static final int address=0x7f060007;
         public static final int app_name=0x7f060001;
         public static final int choose_order=0x7f06000f;

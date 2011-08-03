@@ -19,6 +19,8 @@ class RestaurantHelper extends SQLiteOpenHelper {
 	// The Android's default system path of your application database.
 	private static String DB_PATH = "/data/data/com.henrik.bak.restaurantguide/databases/";
 	private static String DB_NAME = "lunchlist.db";
+	private static String REST_TABLE = "restaurants";
+	private static String FAV_TABLE = "favourites";
 	private static final int SCHEMA_VERSION=1;
 
 	private SQLiteDatabase myDataBase;
@@ -171,14 +173,14 @@ class RestaurantHelper extends SQLiteOpenHelper {
 		cv.put("phone", phone);
 		cv.put("web", web);
 		cv.put("details", details);
-		getWritableDatabase().insert("restaurants", "name", cv);
+		getWritableDatabase().insert(REST_TABLE, "name", cv);
 
 	}
 
 	public Cursor getAllRestaurants(String orderBy) {
 		return (getReadableDatabase()
 				.rawQuery(
-						"SELECT _id, name, address, phone, web, details, lat, lon FROM restaurants ORDER BY "
+						"SELECT _id, name, address, phone, web, details, lat, lon FROM "+REST_TABLE+" ORDER BY "
 								+ orderBy, null));
 	}
 
@@ -186,7 +188,7 @@ class RestaurantHelper extends SQLiteOpenHelper {
 		String[] args = { id };
 		return (getReadableDatabase()
 				.rawQuery(
-						"SELECT _id, name, address, phone, web, details, lat, lon FROM restaurants WHERE _ID=?",
+						"SELECT _id, name, address, phone, web, details, lat, lon FROM "+REST_TABLE+" WHERE _ID=?",
 						args));
 	}
 
@@ -199,7 +201,7 @@ class RestaurantHelper extends SQLiteOpenHelper {
 		cv.put("phone", phone);
 		cv.put("web", web);
 		cv.put("details", details);
-		getWritableDatabase().update("restaurants", cv, "_ID=?", args);
+		getWritableDatabase().update(REST_TABLE, cv, "_ID=?", args);
 	}
 
 	public void updateLocation(String id, double lat, double lon) {
@@ -207,12 +209,12 @@ class RestaurantHelper extends SQLiteOpenHelper {
 		String[] args = { id };
 		cv.put("lat", lat);
 		cv.put("lon", lon);
-		getWritableDatabase().update("restaurants", cv, "_ID=?", args);
+		getWritableDatabase().update(REST_TABLE, cv, "_ID=?", args);
 	}
 
 	public void deleteRestaurantById(String id) {
 		String[] args = { id };
-		getWritableDatabase().delete("restaurants", "_ID=?", args);
+		getWritableDatabase().delete(REST_TABLE, "_ID=?", args);
 	}
 	
 	public Cursor getSearchResults(String name, String address, String phone,
@@ -220,10 +222,36 @@ class RestaurantHelper extends SQLiteOpenHelper {
 
 		return (getReadableDatabase()
 				.rawQuery(
-						"SELECT _id, name, address, phone, web, details, lat, lon FROM restaurants WHERE name LIKE '%"+name+"%' OR address LIKE '%"+address+"%' OR phone LIKE '%"+phone+"%' OR web LIKE '%"+web+"%' OR details LIKE '%"+details+"%'",null));
+						"SELECT _id, name, address, phone, web, details, lat, lon FROM "+REST_TABLE+" WHERE name LIKE '%"+name+"%' OR address LIKE '%"+address+"%' OR phone LIKE '%"+phone+"%' OR web LIKE '%"+web+"%' OR details LIKE '%"+details+"%'",null));
 		
 	}
 	
+	
+	public void insertToFavourites(int resid) {
+		ContentValues cv = new ContentValues();
+		cv.put("resid", resid);
+		getWritableDatabase().insert(FAV_TABLE, "resid", cv);
+	}
+	
+	public Cursor getAllFavourites() {
+		return (getReadableDatabase()
+				.rawQuery(
+						"SELECT _id, resid FROM "+FAV_TABLE, null));
+	}
+
+	public Cursor getFavouriteById(String id) {
+		String[] args = { id };
+		return (getReadableDatabase()
+				.rawQuery(
+						"SELECT _id, resid FROM "+FAV_TABLE+" WHERE _ID=?",
+						args));
+	}
+	
+	public void deleteFavouriteById(String id) {
+		String[] args = { id };
+		getWritableDatabase().delete(FAV_TABLE, "_ID=?", args);
+	}
+
 
 	public void insertReview(String user, int score, String review, int resid) {
 		ContentValues cv = new ContentValues();

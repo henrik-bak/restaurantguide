@@ -133,6 +133,12 @@ public class Details extends Activity {
 			startActivity(i);
 
 			return (true);
+		} else if (item.getItemId() == R.id.addfav) {
+			Intent i = new Intent(this, Favourites.class);
+
+			startActivity(i);
+
+			return (true);
 		}
 
 		return (super.onOptionsItemSelected(item));
