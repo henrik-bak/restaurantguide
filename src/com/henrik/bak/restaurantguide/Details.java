@@ -91,7 +91,7 @@ public class Details extends Activity {
 		if (phone != null) {
 			try {
 				startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:"
-						+ phone.getText())));
+						+ phone.getText().toString())));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -115,7 +115,7 @@ public class Details extends Activity {
 		if (item.getItemId() == R.id.plan_route) {
 			
 			locMgr.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, onLocationChange);
-			
+		
 			 Uri uri = Uri
              .parse("http://maps.google.com/maps?&saddr=" + mCurrLat+","+mCurrLon+"&daddr="+ latitude +"," +longitude);
        Intent intent = new Intent(Intent.ACTION_VIEW, uri);

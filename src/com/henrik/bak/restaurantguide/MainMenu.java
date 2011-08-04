@@ -21,7 +21,7 @@ public class MainMenu extends Activity {
 	}
 	
 	public void ShowList(View view) {
-		Intent i=new Intent(MainMenu.this, TabHostController.class);
+		Intent i=new Intent(MainMenu.this, RestaurantListActivity.class);
 		startActivity(i);
 	 }
 	
