@@ -5,36 +5,36 @@
 		android:shrinkColumns="1">
 		<TableRow>
 			<TextView android:textAppearance="?android:attr/textAppearanceLarge"
-				android:text="Edit" android:layout_height="wrap_content"
+				android:text="@string/edit" android:layout_height="wrap_content"
 				android:layout_width="wrap_content" android:layout_gravity="fill"></TextView>
 
 		</TableRow>
 		<TableRow>
-			<TextView android:text="Name:" />
+			<TextView android:text="@string/name" />
 			<EditText android:id="@+id/edit_name" android:scrollbars="horizontal" />
 		</TableRow>
 		<TableRow>
-			<TextView android:text="Address:" />
+			<TextView android:text="@string/address" />
 			<EditText android:id="@+id/edit_addr" android:scrollbars="horizontal" />
 
 		</TableRow>
 		<TableRow>
-			<TextView android:text="Phone:" />
+			<TextView android:text="@string/phone" />
 			<EditText android:id="@+id/edit_phone" />
 		</TableRow>
 		<TableRow>
-			<TextView android:text="Homepage:" />
+			<TextView android:text="@string/web" />
 			<EditText android:id="@+id/edit_web" android:text="(not set)"
 				android:scrollbars="horizontal" />
 		</TableRow>
 		<TableRow>
-			<TextView android:text="Location:" />
-			<TextView android:id="@+id/edit_location" android:text="(not set)" />
+			<TextView android:text="@string/location" />
+			<TextView android:id="@+id/edit_location" android:text="@string/not_set" />
 		</TableRow>
 		<EditText android:id="@+id/edit_details" android:inputType="textMultiLine"
 			android:gravity="top" android:lines="4" android:maxLines="6"
 			android:layout_span="2"
-			android:hint="Notes" android:layout_marginTop="4dip"
+			android:hint="@string/notes" android:layout_marginTop="4dip"
 			android:scrollbars="vertical" />
 	</TableLayout>
 </ScrollView>

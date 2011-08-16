@@ -8,24 +8,24 @@
 		android:shrinkColumns="1"
 		>
 		<TableRow>
-			<TextView android:textAppearance="?android:attr/textAppearanceLarge" android:text="Search" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="fill"></TextView>
+			<TextView android:textAppearance="?android:attr/textAppearanceLarge" android:text="@string/search" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="fill"></TextView>
 			
 		</TableRow>
 		<TableRow>
-			<TextView android:text="Name:" />
+			<TextView android:text="@string/name" />
 			<EditText android:id="@+id/search_name" />
 		</TableRow>
 		<TableRow>
-			<TextView android:text="Address:" />
+			<TextView android:text="@string/address" />
 			<EditText android:id="@+id/search_addr" />
 
 		</TableRow>
 		<TableRow>
-			<TextView android:text="Phone:" />
+			<TextView android:text="@string/phone" />
 			<EditText android:id="@+id/search_phone" />
 		</TableRow>
 		<TableRow>
-			<TextView android:text="Homepage:" />
+			<TextView android:text="@string/web" />
 			<EditText android:id="@+id/search_web" />
 		</TableRow>
 		<EditText android:id="@+id/search_details"
@@ -35,11 +35,11 @@
 			android:scrollHorizontally="false"
 			android:maxLines="2"
 			android:layout_span="2"
-			android:hint="Details"
+			android:hint="@string/details"
 			android:layout_marginTop="4dip"
 		/>
 	
-		<Button android:text="Search!" android:layout_width="wrap_content" android:onClick="GetParams"/>
+		<Button android:text="@string/search" android:layout_width="wrap_content" android:onClick="GetParams"/>
 
 	</TableLayout>
 </ScrollView>

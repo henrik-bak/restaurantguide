@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string-array name="sort_names">
-		<item>By Name, Ascending</item>
-		<item>By Name, Descending</item>
-		<item>By Type</item>
-		<item>By Address, Ascending</item>
-		<item>By Address, Descending</item>
+		<item>Név szerint csökkenő</item>
+		<item>Név szerint növekvő</item>
+		<item>Típus szerint</item>
+		<item>Cím szerint csökkenő</item>
+		<item>Cím szerint növekvő</item>
 	</string-array>
 	<string-array name="sort_clauses">
 		<item>name ASC</item>
